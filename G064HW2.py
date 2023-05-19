@@ -127,19 +127,17 @@ def permutations_with_repetition(items, length=None):
 def unique_tuples(tuples):
     # Create an empty set to hold the unique tuples
     unique_tuples = set()
-    
+
     # Iterate over each tuple in the original list
     for t in tuples:
         # Sort the tuple so that the elements are in a consistent order
         sorted_t = tuple(sorted(t))
-        
-        # If the sorted tuple is not already in the set, add it
-        if sorted_t not in unique_tuples:
-            unique_tuples.add(sorted_t)
+        # add the tuple to the set
+        unique_tuples.add(sorted_t)
     
     # Convert the set of unique tuples back to a list
     unique_tuples_list = list(unique_tuples)
-    
+
     return unique_tuples_list
 
 def tuple_in_list(tuples, target_tuple):
